@@ -1,0 +1,21 @@
+// File lists parameters for displacement simulations. 
+// First uncommented row contains path to HAS simulation. (Only list one file)
+// On all remaining rows, multiple parameters can be listed if a batch of simulations is desired
+//
+//
+// PATH TO DESIRED HAS pressure pattern (No parenthesis needed)
+./example_data/pout_51_51_51_1mm_delta.mat
+// shear wave speed (c_s) [m/s]
+1 1
+// shear viscosity (eta_s) [Pa * s]
+0.5 0.5 
+// Simulation time step [s]
+0.0005 0.0005
+// Maximum simulation time [s]
+0.020 0.020
+// ARF pulse duration time steps [#] Total pulse time is (#_time_steps) * (Simulation time step)
+4 4
+// Handle Singularity (1 = replace singularity with 3D average (Recommended), 2 = replace S & P with 2D ave, PS set to 0)
+1 2
+// Green's Function Terms to Use: 1 = Just S; 2 = Just P; 4 = Just PS; 3 = S * P; 5 = S & PS; 6 = P & PS; 7 = P & S & PS
+7 7
